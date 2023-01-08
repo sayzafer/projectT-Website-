@@ -1,0 +1,52 @@
+body {
+  background-image: linear-gradient(to right, #152744, #61D2B4);
+  margin: 0px;
+  overflow: hidden;
+}
+  
+  h4 {
+    margin-top: 1em;
+    color: #eee;
+    font-size: 150%;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  button {
+      
+    display: inline;
+    background: #01A4E0;
+    color: #2184AC;
+    border: 0;
+    padding: 4px;
+    
+  }
+  
+  input {
+      border-radius: 20px;
+      display: block;
+      width: 98%;
+      height: 30px; 
+      margin-top: 1.0em;
+      padding: 4px;
+  }
+  
+  .login-box {
+      width: 25%;
+      height: 60%;
+      font-family: sans-serif;
+      left: 35%;
+       top: 30%;
+      position: absolute;
+      padding: 1%;
+  }
+  
+  .outer-box {
+      display: block;
+      margin: auto;
+      background: #6f92dc;
+      border-radius: 5px;
+      width: 50%;
+      height: 20em;
+    height: auto;
+  }
