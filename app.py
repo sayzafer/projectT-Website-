@@ -66,7 +66,7 @@ def signup():
 
 @app.route("/list_cargos", methods=["POST", "GET"])
 def list_cargos():
-    response = requests.get("http://localhost:80/cargoall/zafer@gmail.com/1234")
+    response = requests.get("http://139.144.161.179:8080/cargoall/zafer@gmail.com/1234")
     json = response.json()
     print(json)
     type = []
