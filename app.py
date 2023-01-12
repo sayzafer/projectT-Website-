@@ -27,7 +27,7 @@ def login_index():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        response = requests.get("http://localhost/login/zafer@gmail.com/1234")
+        response = requests.get("http://139.144.161.179:8080/login/zafer@gmail.com/1234")
         email = request.form.get('email')
         psw = request.form.get('password')
         # respose to json
@@ -46,7 +46,7 @@ def login():
 @app.route("/signUp", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
-        response = requests.get("http://localhost/login/zafer@gmail.com/1234")
+        response = requests.get("http://139.144.161.179:8080/login/zafer@gmail.com/1234")
         nationalID = request.form.get("kimlikno")
         email = request.form.get("email")
         password = request.form.get("password")
@@ -54,7 +54,7 @@ def signup():
         surname = request.form.get("surname")
         phone = request.form.get("phone")
         address = request.form.get("adress")
-        s = "http://localhost/signup/"+name+"/"+surname+"/"+password+"/"+email+"/"+address+"/"+phone+"/"+nationalID
+        s = "http://139.144.161.179:8080/signup/"+name+"/"+surname+"/"+password+"/"+email+"/"+address+"/"+phone+"/"+nationalID
         print(s)
         session["user_name"] = name
         session["user_email"] = email
@@ -66,7 +66,7 @@ def signup():
 
 @app.route("/list_cargos", methods=["POST", "GET"])
 def list_cargos():
-    response = requests.get("http://localhost/cargoall/zafer@gmail.com/1234")
+    response = requests.get("http://localhost:80/cargoall/zafer@gmail.com/1234")
     json = response.json()
     print(json)
     type = []
@@ -91,7 +91,7 @@ def list_cargos():
 
 @app.route("/profile", methods=["POST", "GET"])
 def profile():
-    response = requests.get("http://localhost/login/zafer@gmail.com/1234")
+    response = requests.get("http://139.144.161.179:8080/login/zafer@gmail.com/1234")
     json = response.json()
     print(json)
     name = json["user"]["Name"]
@@ -105,4 +105,4 @@ def profile():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=5001)
